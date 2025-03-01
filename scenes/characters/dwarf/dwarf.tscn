@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://cfltk2vb6m12h"]
+
+[ext_resource type="Script" path="res://scenes/characters/dwarf/dwarf.gd" id="1_3uqhr"]
+[ext_resource type="Texture2D" uid="uid://mxanx5igt4km" path="res://assets/game/characters/Magnus.png" id="1_5lwf8"]
+[ext_resource type="PackedScene" uid="uid://cr73pd6ihcwgh" path="res://scenes/components/interactable_component.tscn" id="2_2rf2f"]
+[ext_resource type="PackedScene" uid="uid://dth1ui1275f1i" path="res://scenes/components/interactable_label_component.tscn" id="3_uubxp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xstrv"]
+atlas = ExtResource("1_5lwf8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8nx2"]
+atlas = ExtResource("1_5lwf8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l54rh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xstrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8nx2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_od3vd"]
+radius = 21.0
+
+[node name="Dwarf" type="Node2D"]
+script = ExtResource("1_3uqhr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_l54rh")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.919671
+
+[node name="InteractableComponent" parent="." instance=ExtResource("2_2rf2f")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+position = Vector2(0, -15)
+shape = SubResource("CircleShape2D_od3vd")
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("3_uubxp")]
+offset_left = -28.0
+offset_top = -46.0
+offset_right = -28.0
+offset_bottom = -46.0

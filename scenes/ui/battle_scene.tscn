@@ -1,0 +1,741 @@
+[gd_scene load_steps=99 format=3 uid="uid://b1jpoa347or0m"]
+
+[ext_resource type="Script" path="res://scenes/ui/emotes.gd" id="1_ck2g4"]
+[ext_resource type="Texture2D" uid="uid://cmwmohqaqvtgt" path="res://assets/ui/React_Test.png" id="2_ein70"]
+[ext_resource type="Texture2D" uid="uid://mxanx5igt4km" path="res://assets/game/characters/Magnus.png" id="3_vhjdq"]
+[ext_resource type="Texture2D" uid="uid://doyrwv4h6wbnb" path="res://assets/ui/Teemo Basic emote animations sprite sheet.png" id="3_vus41"]
+[ext_resource type="Script" path="res://scenes/ui/textbox.gd" id="4_qv7r8"]
+[ext_resource type="AudioStream" uid="uid://c8dh5touyu5rv" path="res://assets/audio/Undertale OST 009 - Enemy Approaching.mp3" id="6_bwsin"]
+[ext_resource type="Texture2D" uid="uid://tamsr1dwpsgb" path="res://assets/ui/Buttons.png" id="7_5vg47"]
+[ext_resource type="Script" path="res://scenes/ui/actions.gd" id="7_w1h8b"]
+[ext_resource type="Texture2D" uid="uid://xu164o1w06ab" path="res://assets/ui/UI_elements_1.png" id="9_ik1ej"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2a14p"]
+atlas = ExtResource("2_ein70")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubnne"]
+atlas = ExtResource("3_vus41")
+region = Rect2(0, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3jab"]
+atlas = ExtResource("3_vus41")
+region = Rect2(32, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kll7d"]
+atlas = ExtResource("3_vus41")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cjwn"]
+atlas = ExtResource("3_vus41")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrw2y"]
+atlas = ExtResource("3_vus41")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0koeg"]
+atlas = ExtResource("3_vus41")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ww6w"]
+atlas = ExtResource("3_vus41")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0iwoj"]
+atlas = ExtResource("3_vus41")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5bpg"]
+atlas = ExtResource("3_vus41")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5jv7"]
+atlas = ExtResource("3_vus41")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqcgp"]
+atlas = ExtResource("3_vus41")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rk3ma"]
+atlas = ExtResource("3_vus41")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5aeki"]
+atlas = ExtResource("3_vus41")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2u61"]
+atlas = ExtResource("3_vus41")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_linea"]
+atlas = ExtResource("3_vus41")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bifke"]
+atlas = ExtResource("3_vus41")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6miqg"]
+atlas = ExtResource("3_vus41")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwuqx"]
+atlas = ExtResource("3_vus41")
+region = Rect2(32, 192, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mnstc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubnne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3jab")
+}],
+"loop": true,
+"name": &"emote_12_talking",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kll7d")
+}],
+"loop": true,
+"name": &"emote_1_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cjwn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrw2y")
+}],
+"loop": true,
+"name": &"emote_2_smile",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0koeg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ww6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0iwoj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5bpg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5jv7")
+}],
+"loop": true,
+"name": &"emote_3_ear_wave",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqcgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rk3ma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5aeki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2u61")
+}],
+"loop": true,
+"name": &"emote_4_blink",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_linea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bifke")
+}],
+"loop": true,
+"name": &"emote_6_kiss",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6miqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwuqx")
+}],
+"loop": true,
+"name": &"emote_7_excited",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnh0d"]
+atlas = ExtResource("3_vhjdq")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3d7bg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnh0d")
+}],
+"loop": true,
+"name": &"emote_creature_1_idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n46am"]
+atlas = ExtResource("3_vhjdq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ww4fd"]
+atlas = ExtResource("3_vhjdq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i7pr5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n46am")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ww4fd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i57xy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fp5k7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftm0k"]
+atlas = ExtResource("7_5vg47")
+region = Rect2(16, 16, 128, 48)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t8sws"]
+load_path = "res://.godot/imported/Buttons.png-be7e300776aef41362e991b9f60bdb25.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvw3w"]
+atlas = SubResource("CompressedTexture2D_t8sws")
+region = Rect2(16, 80, 128, 48)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mj7ui"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvbi4"]
+atlas = ExtResource("7_5vg47")
+region = Rect2(160, 16, 128, 48)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ogooq"]
+load_path = "res://.godot/imported/Buttons.png-be7e300776aef41362e991b9f60bdb25.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gptvn"]
+atlas = SubResource("CompressedTexture2D_ogooq")
+region = Rect2(160, 80, 128, 48)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5xmyg"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_txaqm"]
+load_path = "res://.godot/imported/Buttons.png-be7e300776aef41362e991b9f60bdb25.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0epp7"]
+atlas = SubResource("CompressedTexture2D_txaqm")
+region = Rect2(304, 16, 128, 48)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vrbn2"]
+load_path = "res://.godot/imported/Buttons.png-be7e300776aef41362e991b9f60bdb25.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pd2sm"]
+atlas = SubResource("CompressedTexture2D_vrbn2")
+region = Rect2(304, 80, 128, 48)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hht1w"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bygq3"]
+load_path = "res://.godot/imported/Buttons.png-be7e300776aef41362e991b9f60bdb25.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdbfw"]
+atlas = SubResource("CompressedTexture2D_bygq3")
+region = Rect2(448, 16, 128, 48)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uiwlv"]
+load_path = "res://.godot/imported/Buttons.png-be7e300776aef41362e991b9f60bdb25.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nu34s"]
+atlas = SubResource("CompressedTexture2D_uiwlv")
+region = Rect2(448, 80, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fmvt"]
+atlas = ExtResource("9_ik1ej")
+region = Rect2(16, 291, 608, 105)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2gaj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4goc4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ni5tl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymqxx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iv85g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hv5lm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x4kxi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ud556"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nkhjl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_71usy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8kauh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_063t3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r4j0v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4pqrf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ne7cr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2h0iy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aqb15"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2oey5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oxo66"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wsdxh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vlrgn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_one35"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jmdil"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wo3cd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1dx1r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2p5kp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gbwve"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xjho7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x37qc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5bnkv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wgr8u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5q1rm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cq3l4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_84jix"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uyee1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8toke"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vb5tq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ttic3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6jrq3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bkdai"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8dhrg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fexqv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6v6ve"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5hkyv"]
+
+[node name="BattleScene" type="CanvasLayer"]
+script = ExtResource("1_ck2g4")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_2a14p")
+
+[node name="EmotePlayer" type="AnimatedSprite2D" parent="."]
+position = Vector2(87, 247.5)
+scale = Vector2(1.9375, 1.96875)
+sprite_frames = SubResource("SpriteFrames_mnstc")
+animation = &"emote_1_idle"
+autoplay = "emote_1_idle"
+
+[node name="EmoteCreature" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(89, 251)
+scale = Vector2(2.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_3d7bg")
+animation = &"emote_creature_1_idle"
+flip_h = true
+
+[node name="EmoteTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Creature" type="AnimatedSprite2D" parent="."]
+position = Vector2(324.25, 99.25)
+scale = Vector2(6.07813, 5.01563)
+sprite_frames = SubResource("SpriteFrames_i7pr5")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.182869
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_bwsin")
+volume_db = -35.604
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 358.0
+
+[node name="Textbox" type="HBoxContainer" parent="UI"]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 219.0
+offset_right = 582.0
+offset_bottom = 276.0
+script = ExtResource("4_qv7r8")
+
+[node name="Start" type="Label" parent="UI/Textbox"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "*
+"
+
+[node name="Label" type="Label" parent="UI/Textbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 2
+clip_text = true
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="End" type="Label" parent="UI/Textbox"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "*
+"
+
+[node name="Actions" type="HBoxContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.851955
+anchor_right = 0.975
+anchor_bottom = 0.986033
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 34
+script = ExtResource("7_w1h8b")
+metadata/_edit_use_anchors_ = true
+
+[node name="ReactButton" type="Button" parent="UI/Actions"]
+custom_minimum_size = Vector2(126, 0)
+layout_direction = 1
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i57xy")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_fp5k7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fp5k7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_fp5k7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fp5k7")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_fp5k7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fp5k7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fp5k7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fp5k7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_fp5k7")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fp5k7")
+action_mode = 0
+
+[node name="React_normal" type="TextureRect" parent="UI/Actions/ReactButton"]
+layout_mode = 2
+offset_left = -1.0
+offset_right = 127.0
+offset_bottom = 48.0
+texture = SubResource("AtlasTexture_ftm0k")
+
+[node name="React_active" type="TextureRect" parent="UI/Actions/ReactButton"]
+visible = false
+layout_mode = 2
+offset_left = -1.0
+offset_right = 127.0
+offset_bottom = 48.0
+texture = SubResource("AtlasTexture_hvw3w")
+
+[node name="GiftButton" type="Button" parent="UI/Actions"]
+custom_minimum_size = Vector2(126, 0)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mj7ui")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_mj7ui")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mj7ui")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_mj7ui")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_mj7ui")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_mj7ui")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mj7ui")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_mj7ui")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mj7ui")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_mj7ui")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mj7ui")
+action_mode = 0
+text = "       DIARY"
+
+[node name="Gift_normal" type="TextureRect" parent="UI/Actions/GiftButton"]
+layout_mode = 2
+offset_left = -1.0
+offset_right = 127.0
+offset_bottom = 48.0
+texture = SubResource("AtlasTexture_wvbi4")
+
+[node name="Gift_active" type="TextureRect" parent="UI/Actions/GiftButton"]
+visible = false
+layout_mode = 2
+offset_left = -1.0
+offset_right = 127.0
+offset_bottom = 48.0
+texture = SubResource("AtlasTexture_gptvn")
+
+[node name="FightButton" type="Button" parent="UI/Actions"]
+custom_minimum_size = Vector2(126, 0)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5xmyg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5xmyg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5xmyg")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5xmyg")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5xmyg")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5xmyg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5xmyg")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5xmyg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5xmyg")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5xmyg")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5xmyg")
+action_mode = 0
+text = "       GIFT"
+
+[node name="Fight_normal" type="TextureRect" parent="UI/Actions/FightButton"]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 127.0
+offset_bottom = 48.0
+texture = SubResource("AtlasTexture_0epp7")
+
+[node name="Fight_active" type="TextureRect" parent="UI/Actions/FightButton"]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_right = 127.0
+offset_bottom = 48.0
+texture = SubResource("AtlasTexture_pd2sm")
+
+[node name="RunButton" type="Button" parent="UI/Actions"]
+custom_minimum_size = Vector2(126, 0)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hht1w")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hht1w")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hht1w")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_hht1w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_hht1w")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_hht1w")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hht1w")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_hht1w")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hht1w")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_hht1w")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hht1w")
+action_mode = 0
+text = "       BACK"
+
+[node name="Run_normal" type="TextureRect" parent="UI/Actions/RunButton"]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 127.0
+offset_bottom = 48.0
+texture = SubResource("AtlasTexture_cdbfw")
+
+[node name="Run_active" type="TextureRect" parent="UI/Actions/RunButton"]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_right = 127.0
+offset_bottom = 48.0
+texture = SubResource("AtlasTexture_nu34s")
+
+[node name="Reactions" type="TextureRect" parent="UI"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 196.0
+offset_right = 623.0
+offset_bottom = 301.0
+texture = SubResource("AtlasTexture_7fmvt")
+
+[node name="Button" type="Button" parent="UI/Reactions"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 16.0
+offset_right = 240.0
+offset_bottom = 47.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s2gaj")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_4goc4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ni5tl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ymqxx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_iv85g")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_hv5lm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x4kxi")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ud556")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nkhjl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_71usy")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8kauh")
+text = "*    compliment"
+alignment = 0
+
+[node name="Button2" type="Button" parent="UI/Reactions"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 59.0
+offset_right = 240.0
+offset_bottom = 90.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_063t3")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_r4j0v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4pqrf")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ne7cr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2h0iy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_aqb15")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2oey5")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_oxo66")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wsdxh")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vlrgn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_one35")
+text = "*    pat pat"
+alignment = 0
+
+[node name="Button3" type="Button" parent="UI/Reactions"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 16.0
+offset_right = 521.0
+offset_bottom = 47.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jmdil")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_wo3cd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1dx1r")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_2p5kp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_gbwve")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_xjho7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x37qc")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5bnkv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wgr8u")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5q1rm")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cq3l4")
+text = "*    intimidate"
+alignment = 0
+
+[node name="Button4" type="Button" parent="UI/Reactions"]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 59.0
+offset_right = 522.0
+offset_bottom = 90.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_84jix")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_uyee1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8toke")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vb5tq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ttic3")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6jrq3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bkdai")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8dhrg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fexqv")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_6v6ve")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5hkyv")
+text = "*    stare"
+alignment = 0
+
+[connection signal="timeout" from="EmoteTimer" to="." method="_on_emote_timer_timeout"]
+[connection signal="pressed" from="UI/Actions/ReactButton" to="UI/Actions" method="_on_react_button_pressed"]
+[connection signal="pressed" from="UI/Actions/GiftButton" to="UI/Actions" method="_on_gift_button_pressed"]
+[connection signal="pressed" from="UI/Actions/FightButton" to="UI/Actions" method="_on_fight_button_pressed"]
+[connection signal="pressed" from="UI/Actions/RunButton" to="UI/Actions" method="_on_run_button_pressed"]

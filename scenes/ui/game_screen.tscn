@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://isrk6cykre1r"]
+
+[ext_resource type="Theme" uid="uid://csdhsybyg66p8" path="res://scenes/ui/game_ui_theme.tres" id="1_1xfiv"]
+[ext_resource type="PackedScene" uid="uid://cm0knojkhjdt8" path="res://scenes/ui/tools_panel.tscn" id="2_s8o38"]
+
+[node name="GameScreen" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = -49.0
+offset_right = 88.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("1_1xfiv")
+
+[node name="ToolsPanel" parent="MarginContainer" instance=ExtResource("2_s8o38")]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8

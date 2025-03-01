@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dth1ui1275f1i"]
+
+[ext_resource type="Texture2D" uid="uid://c3ra05216sibg" path="res://assets/ui/basic_ui_sprites.png" id="1_v4dnp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxc42"]
+atlas = ExtResource("1_v4dnp")
+region = Rect2(375, 104, 18, 17)
+
+[node name="InteractableLabelComponent" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = SubResource("AtlasTexture_rxc42")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 13.0
+offset_bottom = 17.0
+theme_override_font_sizes/font_size = 10
+text = "E"
+horizontal_alignment = 1
