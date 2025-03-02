@@ -1,1 +1,1 @@
-MAGNUS 
+MAGNUS. 
